@@ -3,440 +3,718 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Al-Adn Online Quran Academy 24</title>
-
+<meta name="description" content="Learn Quran with Tajweed, Nazra, Hifz, Translation and basic Islamic teachings online.">
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #163d2a;
-  background: #fffdf4;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-}
-
-.topbar {
-  background: #043c27;
-  color: white;
-  padding: 12px 5%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.navbar {
-  background: #fffdf4;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 5%;
-  gap: 20px;
-  border-bottom: 3px solid #d6b34d;
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: bold;
-  color: #075637;
-}
-
-.navlinks {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-}
-
-.navlinks a {
-  color: #17472e;
-  font-weight: bold;
-}
-
-.hero {
-  background:
-    linear-gradient(90deg, rgba(0,50,30,.85), rgba(0,65,38,.65)),
-    url("https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1600&q=85");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-  border-bottom: 5px solid #d6b34d;
-}
-
-.hero h1 {
-  font-size: clamp(32px, 5vw, 60px);
-  margin-bottom: 15px;
-}
-
-.hero h2 {
-  color: #ffdc72;
-  font-size: clamp(22px, 3vw, 35px);
-  margin-bottom: 18px;
-}
-
-.hero p {
-  font-size: 19px;
-  line-height: 1.8;
-  max-width: 750px;
-  margin: 0 auto 20px;
-}
-
-.button {
-  display: inline-block;
-  background: #087b48;
-  color: white;
-  padding: 15px 28px;
-  border-radius: 35px;
-  border: 2px solid #f2d36c;
-  font-weight: bold;
-  margin-top: 12px;
-}
-
-.button:hover {
-  background: #06482f;
-}
-
-.section {
-  padding: 55px 5%;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 36px;
-  color: #075637;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  color: #6d603e;
-  margin-bottom: 30px;
-  font-size: 18px;
-}
-
-.courses {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-}
-
-.course {
-  background: #fff;
-  border: 1px solid #dfc77c;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,.12);
-  transition: transform .2s;
-}
-
-.course:hover {
-  transform: translateY(-5px);
-}
-
-.course img {
-  width: 100%;
-  height: 175px;
-  object-fit: cover;
-}
-
-.course h3 {
-  background: #075637;
-  color: white;
-  padding: 14px 8px;
-  font-size: 19px;
-}
-
-.course p {
-  padding: 18px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.about {
-  background: #f5f0dc;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  align-items: center;
-  gap: 35px;
-  padding: 55px 5%;
-}
-
-.about img {
-  width: 100%;
-  max-height: 430px;
-  object-fit: cover;
-  border: 5px solid #d6b34d;
-  border-radius: 15px;
-}
-
-.about h2 {
-  color: #075637;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.about p {
-  line-height: 1.9;
-  font-size: 17px;
-  margin-bottom: 15px;
-}
-
-.features {
-  background: #06452d;
-  color: white;
-  padding: 35px 5%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 25px;
-  text-align: center;
-}
-
-.feature {
-  border-right: 1px solid #c6a94c;
-  padding: 12px;
-}
-
-.feature h3 {
-  color: #ffdc72;
-  margin-bottom: 10px;
-}
-
-.contact {
-  background: #fffdf4;
-  text-align: center;
-  padding: 55px 20px;
-}
-
-.contact h2 {
-  font-size: 35px;
-  color: #075637;
-  margin-bottom: 18px;
-}
-
-.contact p {
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-
-footer {
-  background: #043c27;
-  color: white;
-  text-align: center;
-  padding: 30px 15px;
-  line-height: 2;
-  border-top: 4px solid #d6b34d;
-}
-
-footer strong {
-  color: #ffdc72;
-}
-
-@media(max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navlinks {
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .hero {
-    padding: 55px 15px;
-  }
-
-  .section-title {
-    font-size: 28px;
-  }
-
-  .feature {
-    border-right: none;
-    border-bottom: 1px solid #c6a94c;
-  }
-}
+:root{--green:#123d32;--green2:#1d6650;--gold:#d6b36a;--cream:#f8f5ed;--ink:#20312c}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+header{background:var(--green);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
+.top{max-width:1150px;margin:auto;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:19px;font-weight:800;line-height:1.25}
+.brand span{display:block;color:var(--gold);font-size:12px;letter-spacing:1.5px;margin-top:4px}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{background:linear-gradient(90deg,#0b2b24ee,#0b2b2488),url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;text-align:center;padding:100px 6%}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.15;margin:0 auto 20px;max-width:850px}
+.hero p{max-width:680px;margin:0 auto 28px;color:#f2eee3;font-size:18px}
+.btn{display:inline-block;background:var(--gold);color:#172d25;padding:13px 24px;border-radius:30px;font-weight:700;margin:5px}
+.btn.outline{background:transparent;color:white;border:1px solid #fff}
+section{padding:75px 6%;scroll-margin-top:80px}
+.wrap{max-width:1100px;margin:auto}
+.heading{text-align:center;margin:0 auto 38px}
+.heading small{color:var(--green2);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.heading h2{font-size:clamp(27px,4vw,38px);margin:8px 0;color:var(--green)}
+.heading p{max-width:680px;margin:0 auto;color:#66716c}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;border:1px solid #e7e8e2;border-radius:18px;padding:26px;box-shadow:0 8px 25px #102d2010}
+.card .symbol{font-size:30px}
+.card h3{color:var(--green);margin:10px 0}
+.soft{background:var(--cream)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about img{width:100%;height:340px;object-fit:cover;border-radius:20px}
+.about h2{color:var(--green);font-size:34px;line-height:1.2}
+.article-date{color:var(--green2);font-size:13px;font-weight:700}
+.article{display:flex;flex-direction:column}
+.article a{color:var(--green2);font-weight:700;margin-top:auto;padding-top:12px}
+.notice{background:#eaf2ed;border-left:4px solid var(--green2);padding:18px 22px;border-radius:8px;margin-top:25px}
+footer{background:#0b2b24;color:#e8eee9;padding:35px 6%;text-align:center}
+footer a{color:var(--gold)}
+@media(max-width:700px){.top{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding:75px 6%}.about{grid-template-columns:1fr}section{padding:55px 6%}}
 </style>
 </head>
-
 <body>
 
-<div class="topbar">
-  <span>✉ aladnonlinequranacademy24@gmail.com</span>
-  <span>🌍 Online Classes Worldwide</span>
-  <span>◷ Flexible Timings</span>
-</div>
-
-<nav class="navbar">
-  <div class="logo">
-    Al-Adn Online<br>Quran Academy 24
+<header>
+  <div class="top">
+    <a class="brand" href="#home">Al-Adn Online Quran Academy 24<span>LEARN THE QURAN WITH CARE</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About Us</a>
+      <a href="#articles">Daily Articles</a>
+    </nav>
   </div>
+</header>
 
-  <div class="navlinks">
-    <a href="#home">Home</a>
-    <a href="#courses">Courses</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
+<main>
 <section class="hero" id="home">
-  <h1>Al-Adn Online<br>Quran Academy 24</h1>
-
-  <h2>Learn Quran Online with Tajweed</h2>
-
-  <p>
-    Your Trusted Partner for Islamic Education.
-    Learn Quran reading, Tajweed, Hifz and Islamic
-    teachings from the comfort of your home.
-  </p>
-
-  <a class="button"
-     href="https://wa.me/923417605152">
-     Join Our Academy on WhatsApp
-  </a>
+  <h1>Learn the Quran with Confidence and Love</h1>
+  <p>Online Quran classes for children and adults, with a focus on correct recitation, Tajweed and understanding the message of the Quran.</p>
+  <a class="btn" href="https://wa.me/923417605152">Contact Us on WhatsApp</a>
+  <a class="btn outline" href="#courses">Explore Courses</a>
 </section>
 
-<section class="section" id="courses">
-
-  <h2 class="section-title">Our Courses</h2>
-
-  <p class="section-subtitle">
-    Comprehensive Islamic Education for All Ages
-  </p>
-
-  <div class="courses">
-
-    <div class="course">
-      <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=700&q=85"
-           alt="Quran Reading">
-      <h3>Quran Reading</h3>
-      <p>Learn to read the Holy Quran correctly and confidently.</p>
+<section id="courses">
+  <div class="wrap">
+    <div class="heading">
+      <small>Our Courses</small>
+      <h2>Build a Strong Connection with the Quran</h2>
+      <p>Personal online lessons planned according to each student's level and learning pace.</p>
     </div>
-
-    <div class="course">
-      <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=700&q=85"
-           alt="Tajweed and Makharij">
-      <h3>Tajweed & Makharij</h3>
-      <p>Learn the rules of Quran recitation and correct pronunciation.</p>
+    <div class="cards">
+      <article class="card"><div class="symbol">📖</div><h3>Quran Reading (Nazra)</h3><p>Learn to read the Holy Quran step by step with clear pronunciation and regular practice.</p></article>
+      <article class="card"><div class="symbol">✨</div><h3>Tajweed & Makharij</h3><p>Improve your recitation by learning the rules of Tajweed and the correct articulation of letters.</p></article>
+      <article class="card"><div class="symbol">🕌</div><h3>Quran Memorization</h3><p>A structured Hifz program with revision and personal guidance.</p></article>
+      <article class="card"><div class="symbol">📚</div><h3>Translation & Tafseer</h3><p>Explore the meanings and lessons of Quranic verses in an accessible way.</p></article>
+      <article class="card"><div class="symbol">🌙</div><h3>Basic Islamic Teachings</h3><p>Learn essential duas, daily practices and foundational Islamic knowledge.</p></article>
+      <article class="card"><div class="symbol">💻</div><h3>Online One-to-One Classes</h3><p>Study from home through online platforms with flexible class timings.</p></article>
     </div>
-
-    <div class="course">
-      <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=700&q=85"
-           alt="Hifz ul Quran">
-      <h3>Hifz-ul-Quran</h3>
-      <p>Memorize the Holy Quran with proper guidance and revision.</p>
-    </div>
-
-    <div class="course">
-      <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=700&q=85"
-           alt="Translation and Tafseer">
-      <h3>Translation & Tafseer</h3>
-      <p>Understand the meaning and message of the Holy Quran.</p>
-    </div>
-
-    <div class="course">
-      <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=700&q=85"
-           alt="Islamic Education">
-      <h3>Basic Islamic Education</h3>
-      <p>Learn daily duas, Kalimas and essential Islamic teachings.</p>
-    </div>
-
   </div>
 </section>
 
-<section class="about" id="about">
-
-  <div>
-    <h2>About Our Academy</h2>
-
-    <p><strong>Assalamu Alaikum!</strong></p>
-
-    <p>
-      My name is Qari Muhammad Adnan.
-      I am a Hafiz-e-Quran and a graduate of
-      Jamia Faridia Sahiwal.
-    </p>
-
-    <p>
-      I teach Quran reading with Tajweed and other
-      Islamic courses to children and adults.
-    </p>
-
-    <p>
-      Our goal is to help students learn the Holy Quran
-      with correct pronunciation, understanding and love.
-    </p>
+<section class="soft" id="about">
+  <div class="wrap about">
+    <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1000&q=85" alt="Holy Quran on a wooden stand">
+    <div>
+      <small>About the Academy</small>
+      <h2>Quran Learning with Personal Attention</h2>
+      <p>Al-Adn Online Quran Academy 24 is dedicated to helping students learn the Holy Quran with correct recitation and understanding.</p>
+      <p>Classes are led by Qari Muhammad Adnan, a Hafiz-e-Quran and graduate of Jamia Faridia Sahiwal, with experience teaching students in different countries.</p>
+      <p>Our aim is to make Quran learning accessible and meaningful for every student.</p>
+      <a class="btn" href="https://wa.me/923417605152">Ask About Classes</a>
+    </div>
   </div>
-
-  <div>
-    <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=900&q=85"
-         alt="Islamic Education">
-  </div>
-
 </section>
 
-<section class="features">
+<section id="articles">
+  <div class="wrap">
+    <div class="heading">
+      <small>Knowledge & Guidance</small>
+      <h2>Daily Quran Articles</h2>
+      <p>Short reminders and helpful articles about Quran learning, Tajweed and Islamic teachings.</p>
+    </div>
 
-  <div class="feature">
-    <h3>Experienced Teacher</h3>
-    <p>Learn with proper guidance.</p>
+    <div class="cards">
+      <article class="card article">
+        <div class="article-date">ARTICLE 01</div>
+        <h3>The Importance of Learning the Quran</h3>
+        <p>Learning the Quran is a journey of faith, knowledge and daily practice. Begin with small, consistent steps and seek guidance from a qualified teacher.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 02</div>
+        <h3>Why Is Tajweed Important?</h3>
+        <p>Tajweed helps us recite the Quran correctly by giving each letter its proper sound and articulation. Regular practice can gradually improve recitation.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 03</div>
+        <h3>Make Quran Learning a Daily Habit</h3>
+        <p>Choose a manageable time each day, revise what you have learned, and keep learning with patience and consistency.</p>
+      </article>
+    </div>
+
+    <div class="notice">
+      <strong>Want to publish a new article?</strong><br>
+      Add your article by copying an article card in this section, changing its title and text, and committing the updated file on GitHub. You can then share your website link.
+    </div>
   </div>
-
-  <div class="feature">
-    <h3>Flexible Timings</h3>
-    <p>Choose a convenient class time.</p>
-  </div>
-
-  <div class="feature">
-    <h3>Individual Classes</h3>
-    <p>Personal attention for every student.</p>
-  </div>
-
-  <div class="feature">
-    <h3>Online Classes</h3>
-    <p>Learn through Zoom, Skype and WhatsApp.</p>
-  </div>
-
 </section>
-
-<section class="contact" id="contact">
-
-  <h2>Contact Us</h2>
-
-  <p>
-    For admissions and trial classes,
-    contact us directly on WhatsApp.
-  </p>
-
-  <a class="button"
-     href="https://wa.me/923417605152">
-     WhatsApp: +92 341 7605152
-  </a>
-
-  <p>
-    Online Quran Classes for Children and Adults
-  </p>
-
-</section>
+</main>
 
 <footer>
-  <strong>Al-Adn Online Quran Academy 24</strong>
-  <p>Learn Quran | Learn Tajweed | Learn Islam</p>
-  <p>JazakAllah Khair</p>
+  <p><strong>Al-Adn Online Quran Academy 24</strong></p>
+  <p>Quran learning with care, patience and personal attention.</p>
+  <p><a href="https://wa.me/923417605152">Contact on WhatsApp</a></p>
+  <small>© 2026 Al-Adn Online Quran Academy 24</small>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Adn Online Quran Academy 24</title>
+<meta name="description" content="Learn Quran with Tajweed, Nazra, Hifz, Translation and basic Islamic teachings online.">
+<style>
+:root{--green:#123d32;--green2:#1d6650;--gold:#d6b36a;--cream:#f8f5ed;--ink:#20312c}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+header{background:var(--green);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
+.top{max-width:1150px;margin:auto;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:19px;font-weight:800;line-height:1.25}
+.brand span{display:block;color:var(--gold);font-size:12px;letter-spacing:1.5px;margin-top:4px}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{background:linear-gradient(90deg,#0b2b24ee,#0b2b2488),url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;text-align:center;padding:100px 6%}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.15;margin:0 auto 20px;max-width:850px}
+.hero p{max-width:680px;margin:0 auto 28px;color:#f2eee3;font-size:18px}
+.btn{display:inline-block;background:var(--gold);color:#172d25;padding:13px 24px;border-radius:30px;font-weight:700;margin:5px}
+.btn.outline{background:transparent;color:white;border:1px solid #fff}
+section{padding:75px 6%;scroll-margin-top:80px}
+.wrap{max-width:1100px;margin:auto}
+.heading{text-align:center;margin:0 auto 38px}
+.heading small{color:var(--green2);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.heading h2{font-size:clamp(27px,4vw,38px);margin:8px 0;color:var(--green)}
+.heading p{max-width:680px;margin:0 auto;color:#66716c}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;border:1px solid #e7e8e2;border-radius:18px;padding:26px;box-shadow:0 8px 25px #102d2010}
+.card .symbol{font-size:30px}
+.card h3{color:var(--green);margin:10px 0}
+.soft{background:var(--cream)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about img{width:100%;height:340px;object-fit:cover;border-radius:20px}
+.about h2{color:var(--green);font-size:34px;line-height:1.2}
+.article-date{color:var(--green2);font-size:13px;font-weight:700}
+.article{display:flex;flex-direction:column}
+.article a{color:var(--green2);font-weight:700;margin-top:auto;padding-top:12px}
+.notice{background:#eaf2ed;border-left:4px solid var(--green2);padding:18px 22px;border-radius:8px;margin-top:25px}
+footer{background:#0b2b24;color:#e8eee9;padding:35px 6%;text-align:center}
+footer a{color:var(--gold)}
+@media(max-width:700px){.top{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding:75px 6%}.about{grid-template-columns:1fr}section{padding:55px 6%}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <a class="brand" href="#home">Al-Adn Online Quran Academy 24<span>LEARN THE QURAN WITH CARE</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About Us</a>
+      <a href="#articles">Daily Articles</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <h1>Learn the Quran with Confidence and Love</h1>
+  <p>Online Quran classes for children and adults, with a focus on correct recitation, Tajweed and understanding the message of the Quran.</p>
+  <a class="btn" href="https://wa.me/923417605152">Contact Us on WhatsApp</a>
+  <a class="btn outline" href="#courses">Explore Courses</a>
+</section>
+
+<section id="courses">
+  <div class="wrap">
+    <div class="heading">
+      <small>Our Courses</small>
+      <h2>Build a Strong Connection with the Quran</h2>
+      <p>Personal online lessons planned according to each student's level and learning pace.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="symbol">📖</div><h3>Quran Reading (Nazra)</h3><p>Learn to read the Holy Quran step by step with clear pronunciation and regular practice.</p></article>
+      <article class="card"><div class="symbol">✨</div><h3>Tajweed & Makharij</h3><p>Improve your recitation by learning the rules of Tajweed and the correct articulation of letters.</p></article>
+      <article class="card"><div class="symbol">🕌</div><h3>Quran Memorization</h3><p>A structured Hifz program with revision and personal guidance.</p></article>
+      <article class="card"><div class="symbol">📚</div><h3>Translation & Tafseer</h3><p>Explore the meanings and lessons of Quranic verses in an accessible way.</p></article>
+      <article class="card"><div class="symbol">🌙</div><h3>Basic Islamic Teachings</h3><p>Learn essential duas, daily practices and foundational Islamic knowledge.</p></article>
+      <article class="card"><div class="symbol">💻</div><h3>Online One-to-One Classes</h3><p>Study from home through online platforms with flexible class timings.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="about">
+  <div class="wrap about">
+    <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1000&q=85" alt="Holy Quran on a wooden stand">
+    <div>
+      <small>About the Academy</small>
+      <h2>Quran Learning with Personal Attention</h2>
+      <p>Al-Adn Online Quran Academy 24 is dedicated to helping students learn the Holy Quran with correct recitation and understanding.</p>
+      <p>Classes are led by Qari Muhammad Adnan, a Hafiz-e-Quran and graduate of Jamia Faridia Sahiwal, with experience teaching students in different countries.</p>
+      <p>Our aim is to make Quran learning accessible and meaningful for every student.</p>
+      <a class="btn" href="https://wa.me/923417605152">Ask About Classes</a>
+    </div>
+  </div>
+</section>
+
+<section id="articles">
+  <div class="wrap">
+    <div class="heading">
+      <small>Knowledge & Guidance</small>
+      <h2>Daily Quran Articles</h2>
+      <p>Short reminders and helpful articles about Quran learning, Tajweed and Islamic teachings.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card article">
+        <div class="article-date">ARTICLE 01</div>
+        <h3>The Importance of Learning the Quran</h3>
+        <p>Learning the Quran is a journey of faith, knowledge and daily practice. Begin with small, consistent steps and seek guidance from a qualified teacher.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 02</div>
+        <h3>Why Is Tajweed Important?</h3>
+        <p>Tajweed helps us recite the Quran correctly by giving each letter its proper sound and articulation. Regular practice can gradually improve recitation.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 03</div>
+        <h3>Make Quran Learning a Daily Habit</h3>
+        <p>Choose a manageable time each day, revise what you have learned, and keep learning with patience and consistency.</p>
+      </article>
+    </div>
+
+    <div class="notice">
+      <strong>Want to publish a new article?</strong><br>
+      Add your article by copying an article card in this section, changing its title and text, and committing the updated file on GitHub. You can then share your website link.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>Al-Adn Online Quran Academy 24</strong></p>
+  <p>Quran learning with care, patience and personal attention.</p>
+  <p><a href="https://wa.me/923417605152">Contact on WhatsApp</a></p>
+  <small>© 2026 Al-Adn Online Quran Academy 24</small>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Adn Online Quran Academy 24</title>
+<meta name="description" content="Learn Quran with Tajweed, Nazra, Hifz, Translation and basic Islamic teachings online.">
+<style>
+:root{--green:#123d32;--green2:#1d6650;--gold:#d6b36a;--cream:#f8f5ed;--ink:#20312c}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+header{background:var(--green);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
+.top{max-width:1150px;margin:auto;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:19px;font-weight:800;line-height:1.25}
+.brand span{display:block;color:var(--gold);font-size:12px;letter-spacing:1.5px;margin-top:4px}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{background:linear-gradient(90deg,#0b2b24ee,#0b2b2488),url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;text-align:center;padding:100px 6%}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.15;margin:0 auto 20px;max-width:850px}
+.hero p{max-width:680px;margin:0 auto 28px;color:#f2eee3;font-size:18px}
+.btn{display:inline-block;background:var(--gold);color:#172d25;padding:13px 24px;border-radius:30px;font-weight:700;margin:5px}
+.btn.outline{background:transparent;color:white;border:1px solid #fff}
+section{padding:75px 6%;scroll-margin-top:80px}
+.wrap{max-width:1100px;margin:auto}
+.heading{text-align:center;margin:0 auto 38px}
+.heading small{color:var(--green2);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.heading h2{font-size:clamp(27px,4vw,38px);margin:8px 0;color:var(--green)}
+.heading p{max-width:680px;margin:0 auto;color:#66716c}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;border:1px solid #e7e8e2;border-radius:18px;padding:26px;box-shadow:0 8px 25px #102d2010}
+.card .symbol{font-size:30px}
+.card h3{color:var(--green);margin:10px 0}
+.soft{background:var(--cream)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about img{width:100%;height:340px;object-fit:cover;border-radius:20px}
+.about h2{color:var(--green);font-size:34px;line-height:1.2}
+.article-date{color:var(--green2);font-size:13px;font-weight:700}
+.article{display:flex;flex-direction:column}
+.article a{color:var(--green2);font-weight:700;margin-top:auto;padding-top:12px}
+.notice{background:#eaf2ed;border-left:4px solid var(--green2);padding:18px 22px;border-radius:8px;margin-top:25px}
+footer{background:#0b2b24;color:#e8eee9;padding:35px 6%;text-align:center}
+footer a{color:var(--gold)}
+@media(max-width:700px){.top{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding:75px 6%}.about{grid-template-columns:1fr}section{padding:55px 6%}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <a class="brand" href="#home">Al-Adn Online Quran Academy 24<span>LEARN THE QURAN WITH CARE</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About Us</a>
+      <a href="#articles">Daily Articles</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <h1>Learn the Quran with Confidence and Love</h1>
+  <p>Online Quran classes for children and adults, with a focus on correct recitation, Tajweed and understanding the message of the Quran.</p>
+  <a class="btn" href="https://wa.me/923417605152">Contact Us on WhatsApp</a>
+  <a class="btn outline" href="#courses">Explore Courses</a>
+</section>
+
+<section id="courses">
+  <div class="wrap">
+    <div class="heading">
+      <small>Our Courses</small>
+      <h2>Build a Strong Connection with the Quran</h2>
+      <p>Personal online lessons planned according to each student's level and learning pace.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="symbol">📖</div><h3>Quran Reading (Nazra)</h3><p>Learn to read the Holy Quran step by step with clear pronunciation and regular practice.</p></article>
+      <article class="card"><div class="symbol">✨</div><h3>Tajweed & Makharij</h3><p>Improve your recitation by learning the rules of Tajweed and the correct articulation of letters.</p></article>
+      <article class="card"><div class="symbol">🕌</div><h3>Quran Memorization</h3><p>A structured Hifz program with revision and personal guidance.</p></article>
+      <article class="card"><div class="symbol">📚</div><h3>Translation & Tafseer</h3><p>Explore the meanings and lessons of Quranic verses in an accessible way.</p></article>
+      <article class="card"><div class="symbol">🌙</div><h3>Basic Islamic Teachings</h3><p>Learn essential duas, daily practices and foundational Islamic knowledge.</p></article>
+      <article class="card"><div class="symbol">💻</div><h3>Online One-to-One Classes</h3><p>Study from home through online platforms with flexible class timings.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="about">
+  <div class="wrap about">
+    <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1000&q=85" alt="Holy Quran on a wooden stand">
+    <div>
+      <small>About the Academy</small>
+      <h2>Quran Learning with Personal Attention</h2>
+      <p>Al-Adn Online Quran Academy 24 is dedicated to helping students learn the Holy Quran with correct recitation and understanding.</p>
+      <p>Classes are led by Qari Muhammad Adnan, a Hafiz-e-Quran and graduate of Jamia Faridia Sahiwal, with experience teaching students in different countries.</p>
+      <p>Our aim is to make Quran learning accessible and meaningful for every student.</p>
+      <a class="btn" href="https://wa.me/923417605152">Ask About Classes</a>
+    </div>
+  </div>
+</section>
+
+<section id="articles">
+  <div class="wrap">
+    <div class="heading">
+      <small>Knowledge & Guidance</small>
+      <h2>Daily Quran Articles</h2>
+      <p>Short reminders and helpful articles about Quran learning, Tajweed and Islamic teachings.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card article">
+        <div class="article-date">ARTICLE 01</div>
+        <h3>The Importance of Learning the Quran</h3>
+        <p>Learning the Quran is a journey of faith, knowledge and daily practice. Begin with small, consistent steps and seek guidance from a qualified teacher.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 02</div>
+        <h3>Why Is Tajweed Important?</h3>
+        <p>Tajweed helps us recite the Quran correctly by giving each letter its proper sound and articulation. Regular practice can gradually improve recitation.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 03</div>
+        <h3>Make Quran Learning a Daily Habit</h3>
+        <p>Choose a manageable time each day, revise what you have learned, and keep learning with patience and consistency.</p>
+      </article>
+    </div>
+
+    <div class="notice">
+      <strong>Want to publish a new article?</strong><br>
+      Add your article by copying an article card in this section, changing its title and text, and committing the updated file on GitHub. You can then share your website link.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>Al-Adn Online Quran Academy 24</strong></p>
+  <p>Quran learning with care, patience and personal attention.</p>
+  <p><a href="https://wa.me/923417605152">Contact on WhatsApp</a></p>
+  <small>© 2026 Al-Adn Online Quran Academy 24</small>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Adn Online Quran Academy 24</title>
+<meta name="description" content="Learn Quran with Tajweed, Nazra, Hifz, Translation and basic Islamic teachings online.">
+<style>
+:root{--green:#123d32;--green2:#1d6650;--gold:#d6b36a;--cream:#f8f5ed;--ink:#20312c}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+header{background:var(--green);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
+.top{max-width:1150px;margin:auto;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:19px;font-weight:800;line-height:1.25}
+.brand span{display:block;color:var(--gold);font-size:12px;letter-spacing:1.5px;margin-top:4px}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{background:linear-gradient(90deg,#0b2b24ee,#0b2b2488),url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;text-align:center;padding:100px 6%}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.15;margin:0 auto 20px;max-width:850px}
+.hero p{max-width:680px;margin:0 auto 28px;color:#f2eee3;font-size:18px}
+.btn{display:inline-block;background:var(--gold);color:#172d25;padding:13px 24px;border-radius:30px;font-weight:700;margin:5px}
+.btn.outline{background:transparent;color:white;border:1px solid #fff}
+section{padding:75px 6%;scroll-margin-top:80px}
+.wrap{max-width:1100px;margin:auto}
+.heading{text-align:center;margin:0 auto 38px}
+.heading small{color:var(--green2);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.heading h2{font-size:clamp(27px,4vw,38px);margin:8px 0;color:var(--green)}
+.heading p{max-width:680px;margin:0 auto;color:#66716c}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;border:1px solid #e7e8e2;border-radius:18px;padding:26px;box-shadow:0 8px 25px #102d2010}
+.card .symbol{font-size:30px}
+.card h3{color:var(--green);margin:10px 0}
+.soft{background:var(--cream)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about img{width:100%;height:340px;object-fit:cover;border-radius:20px}
+.about h2{color:var(--green);font-size:34px;line-height:1.2}
+.article-date{color:var(--green2);font-size:13px;font-weight:700}
+.article{display:flex;flex-direction:column}
+.article a{color:var(--green2);font-weight:700;margin-top:auto;padding-top:12px}
+.notice{background:#eaf2ed;border-left:4px solid var(--green2);padding:18px 22px;border-radius:8px;margin-top:25px}
+footer{background:#0b2b24;color:#e8eee9;padding:35px 6%;text-align:center}
+footer a{color:var(--gold)}
+@media(max-width:700px){.top{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding:75px 6%}.about{grid-template-columns:1fr}section{padding:55px 6%}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <a class="brand" href="#home">Al-Adn Online Quran Academy 24<span>LEARN THE QURAN WITH CARE</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About Us</a>
+      <a href="#articles">Daily Articles</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <h1>Learn the Quran with Confidence and Love</h1>
+  <p>Online Quran classes for children and adults, with a focus on correct recitation, Tajweed and understanding the message of the Quran.</p>
+  <a class="btn" href="https://wa.me/923417605152">Contact Us on WhatsApp</a>
+  <a class="btn outline" href="#courses">Explore Courses</a>
+</section>
+
+<section id="courses">
+  <div class="wrap">
+    <div class="heading">
+      <small>Our Courses</small>
+      <h2>Build a Strong Connection with the Quran</h2>
+      <p>Personal online lessons planned according to each student's level and learning pace.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="symbol">📖</div><h3>Quran Reading (Nazra)</h3><p>Learn to read the Holy Quran step by step with clear pronunciation and regular practice.</p></article>
+      <article class="card"><div class="symbol">✨</div><h3>Tajweed & Makharij</h3><p>Improve your recitation by learning the rules of Tajweed and the correct articulation of letters.</p></article>
+      <article class="card"><div class="symbol">🕌</div><h3>Quran Memorization</h3><p>A structured Hifz program with revision and personal guidance.</p></article>
+      <article class="card"><div class="symbol">📚</div><h3>Translation & Tafseer</h3><p>Explore the meanings and lessons of Quranic verses in an accessible way.</p></article>
+      <article class="card"><div class="symbol">🌙</div><h3>Basic Islamic Teachings</h3><p>Learn essential duas, daily practices and foundational Islamic knowledge.</p></article>
+      <article class="card"><div class="symbol">💻</div><h3>Online One-to-One Classes</h3><p>Study from home through online platforms with flexible class timings.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="about">
+  <div class="wrap about">
+    <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1000&q=85" alt="Holy Quran on a wooden stand">
+    <div>
+      <small>About the Academy</small>
+      <h2>Quran Learning with Personal Attention</h2>
+      <p>Al-Adn Online Quran Academy 24 is dedicated to helping students learn the Holy Quran with correct recitation and understanding.</p>
+      <p>Classes are led by Qari Muhammad Adnan, a Hafiz-e-Quran and graduate of Jamia Faridia Sahiwal, with experience teaching students in different countries.</p>
+      <p>Our aim is to make Quran learning accessible and meaningful for every student.</p>
+      <a class="btn" href="https://wa.me/923417605152">Ask About Classes</a>
+    </div>
+  </div>
+</section>
+
+<section id="articles">
+  <div class="wrap">
+    <div class="heading">
+      <small>Knowledge & Guidance</small>
+      <h2>Daily Quran Articles</h2>
+      <p>Short reminders and helpful articles about Quran learning, Tajweed and Islamic teachings.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card article">
+        <div class="article-date">ARTICLE 01</div>
+        <h3>The Importance of Learning the Quran</h3>
+        <p>Learning the Quran is a journey of faith, knowledge and daily practice. Begin with small, consistent steps and seek guidance from a qualified teacher.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 02</div>
+        <h3>Why Is Tajweed Important?</h3>
+        <p>Tajweed helps us recite the Quran correctly by giving each letter its proper sound and articulation. Regular practice can gradually improve recitation.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 03</div>
+        <h3>Make Quran Learning a Daily Habit</h3>
+        <p>Choose a manageable time each day, revise what you have learned, and keep learning with patience and consistency.</p>
+      </article>
+    </div>
+
+    <div class="notice">
+      <strong>Want to publish a new article?</strong><br>
+      Add your article by copying an article card in this section, changing its title and text, and committing the updated file on GitHub. You can then share your website link.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>Al-Adn Online Quran Academy 24</strong></p>
+  <p>Quran learning with care, patience and personal attention.</p>
+  <p><a href="https://wa.me/923417605152">Contact on WhatsApp</a></p>
+  <small>© 2026 Al-Adn Online Quran Academy 24</small>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Adn Online Quran Academy 24</title>
+<meta name="description" content="Learn Quran with Tajweed, Nazra, Hifz, Translation and basic Islamic teachings online.">
+<style>
+:root{--green:#123d32;--green2:#1d6650;--gold:#d6b36a;--cream:#f8f5ed;--ink:#20312c}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+header{background:var(--green);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
+.top{max-width:1150px;margin:auto;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:19px;font-weight:800;line-height:1.25}
+.brand span{display:block;color:var(--gold);font-size:12px;letter-spacing:1.5px;margin-top:4px}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{background:linear-gradient(90deg,#0b2b24ee,#0b2b2488),url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;text-align:center;padding:100px 6%}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.15;margin:0 auto 20px;max-width:850px}
+.hero p{max-width:680px;margin:0 auto 28px;color:#f2eee3;font-size:18px}
+.btn{display:inline-block;background:var(--gold);color:#172d25;padding:13px 24px;border-radius:30px;font-weight:700;margin:5px}
+.btn.outline{background:transparent;color:white;border:1px solid #fff}
+section{padding:75px 6%;scroll-margin-top:80px}
+.wrap{max-width:1100px;margin:auto}
+.heading{text-align:center;margin:0 auto 38px}
+.heading small{color:var(--green2);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.heading h2{font-size:clamp(27px,4vw,38px);margin:8px 0;color:var(--green)}
+.heading p{max-width:680px;margin:0 auto;color:#66716c}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;border:1px solid #e7e8e2;border-radius:18px;padding:26px;box-shadow:0 8px 25px #102d2010}
+.card .symbol{font-size:30px}
+.card h3{color:var(--green);margin:10px 0}
+.soft{background:var(--cream)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about img{width:100%;height:340px;object-fit:cover;border-radius:20px}
+.about h2{color:var(--green);font-size:34px;line-height:1.2}
+.article-date{color:var(--green2);font-size:13px;font-weight:700}
+.article{display:flex;flex-direction:column}
+.article a{color:var(--green2);font-weight:700;margin-top:auto;padding-top:12px}
+.notice{background:#eaf2ed;border-left:4px solid var(--green2);padding:18px 22px;border-radius:8px;margin-top:25px}
+footer{background:#0b2b24;color:#e8eee9;padding:35px 6%;text-align:center}
+footer a{color:var(--gold)}
+@media(max-width:700px){.top{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding:75px 6%}.about{grid-template-columns:1fr}section{padding:55px 6%}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <a class="brand" href="#home">Al-Adn Online Quran Academy 24<span>LEARN THE QURAN WITH CARE</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About Us</a>
+      <a href="#articles">Daily Articles</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <h1>Learn the Quran with Confidence and Love</h1>
+  <p>Online Quran classes for children and adults, with a focus on correct recitation, Tajweed and understanding the message of the Quran.</p>
+  <a class="btn" href="https://wa.me/923417605152">Contact Us on WhatsApp</a>
+  <a class="btn outline" href="#courses">Explore Courses</a>
+</section>
+
+<section id="courses">
+  <div class="wrap">
+    <div class="heading">
+      <small>Our Courses</small>
+      <h2>Build a Strong Connection with the Quran</h2>
+      <p>Personal online lessons planned according to each student's level and learning pace.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="symbol">📖</div><h3>Quran Reading (Nazra)</h3><p>Learn to read the Holy Quran step by step with clear pronunciation and regular practice.</p></article>
+      <article class="card"><div class="symbol">✨</div><h3>Tajweed & Makharij</h3><p>Improve your recitation by learning the rules of Tajweed and the correct articulation of letters.</p></article>
+      <article class="card"><div class="symbol">🕌</div><h3>Quran Memorization</h3><p>A structured Hifz program with revision and personal guidance.</p></article>
+      <article class="card"><div class="symbol">📚</div><h3>Translation & Tafseer</h3><p>Explore the meanings and lessons of Quranic verses in an accessible way.</p></article>
+      <article class="card"><div class="symbol">🌙</div><h3>Basic Islamic Teachings</h3><p>Learn essential duas, daily practices and foundational Islamic knowledge.</p></article>
+      <article class="card"><div class="symbol">💻</div><h3>Online One-to-One Classes</h3><p>Study from home through online platforms with flexible class timings.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="about">
+  <div class="wrap about">
+    <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1000&q=85" alt="Holy Quran on a wooden stand">
+    <div>
+      <small>About the Academy</small>
+      <h2>Quran Learning with Personal Attention</h2>
+      <p>Al-Adn Online Quran Academy 24 is dedicated to helping students learn the Holy Quran with correct recitation and understanding.</p>
+      <p>Classes are led by Qari Muhammad Adnan, a Hafiz-e-Quran and graduate of Jamia Faridia Sahiwal, with experience teaching students in different countries.</p>
+      <p>Our aim is to make Quran learning accessible and meaningful for every student.</p>
+      <a class="btn" href="https://wa.me/923417605152">Ask About Classes</a>
+    </div>
+  </div>
+</section>
+
+<section id="articles">
+  <div class="wrap">
+    <div class="heading">
+      <small>Knowledge & Guidance</small>
+      <h2>Daily Quran Articles</h2>
+      <p>Short reminders and helpful articles about Quran learning, Tajweed and Islamic teachings.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card article">
+        <div class="article-date">ARTICLE 01</div>
+        <h3>The Importance of Learning the Quran</h3>
+        <p>Learning the Quran is a journey of faith, knowledge and daily practice. Begin with small, consistent steps and seek guidance from a qualified teacher.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 02</div>
+        <h3>Why Is Tajweed Important?</h3>
+        <p>Tajweed helps us recite the Quran correctly by giving each letter its proper sound and articulation. Regular practice can gradually improve recitation.</p>
+      </article>
+
+      <article class="card article">
+        <div class="article-date">ARTICLE 03</div>
+        <h3>Make Quran Learning a Daily Habit</h3>
+        <p>Choose a manageable time each day, revise what you have learned, and keep learning with patience and consistency.</p>
+      </article>
+    </div>
+
+    <div class="notice">
+      <strong>Want to publish a new article?</strong><br>
+      Add your article by copying an article card in this section, changing its title and text, and committing the updated file on GitHub. You can then share your website link.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>Al-Adn Online Quran Academy 24</strong></p>
+  <p>Quran learning with care, patience and personal attention.</p>
+  <p><a href="https://wa.me/923417605152">Contact on WhatsApp</a></p>
+  <small>© 2026 Al-Adn Online Quran Academy 24</small>
 </footer>
 
 </body>
